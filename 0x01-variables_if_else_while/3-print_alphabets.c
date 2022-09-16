@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main -print if the number is positive, zero, or negative
+* main - print if the number is positive, zero, or negative
 *
 * Description: using the main function
 * this program prints "Programming is positive, zero, or negative
@@ -13,6 +13,10 @@ for (ch = 'a' ; ch <= 'z' ; ch++)
 {
 	putchar(ch);
 }
-putchar('\n');
-retirn(0);
+for (ch = 'A' ; ch <= 'Z' ; ch++)
+{
+	putchar(ch);
+}
+putchar('\n);
+return(0);
 }
