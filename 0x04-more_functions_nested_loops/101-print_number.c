@@ -9,6 +9,7 @@
 void print_number(int n)
 {
 	unsigned int num = n;
+
 	if (n < 0)
 	{
 		putchar('-');
@@ -21,3 +22,5 @@ void print_number(int n)
 	putchar(num % 10 + '0');
 	}
 }
+
+: set number
