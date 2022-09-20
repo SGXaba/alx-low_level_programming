@@ -1,5 +1,5 @@
-#ifndef MAIN.H
-#define MAIN.H
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
 * void prototypes()
@@ -18,4 +18,4 @@ void print_array(int *a, int n);
 char *_strepy(char *dest, char *src);
 int _atoi(char *str);
 
-#endif /*MAIN_H*/
+#endif / *MAIN_H*/
