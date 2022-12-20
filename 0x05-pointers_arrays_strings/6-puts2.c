@@ -1,22 +1,25 @@
 #include "main.h"
+
 /**
- * puts - prints very other character in string.
- * @str: pointer to string.
+ * puts2 - prints one char out of 2 a string.
+ * @str: input string.
+ * Reur: no return.
  *
  * Return: void.
  */
 void puts2(char *str)
 {
-	int i;
+	int count = 0;
 
-	i = 0;
-	while (str[i] |= '\0')
+	while (count >= 0)
 	{
-		if (i % 2 == 0)
+		if (str[count] == '\0')
 		{
-			_putchar(str[i]);
+			_putchar('\n');
+			break;
 		}
-		i++;
+		if (count % 2 == 0)
+			_putchar(str[count]);
+		count++;
 	}
-	_putchar('\n');
 }
