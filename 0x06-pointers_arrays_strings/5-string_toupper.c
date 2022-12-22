@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * reverse_array - function that reverse content of array
- * @a: array
- * @n: number of elements
+ * string_toupper - chagnes all lowercases letters of a string to uppercase
+ * @str: parameter
+ * Return: returns a character
  */
 
 char *string_toupper(char *)
