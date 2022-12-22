@@ -4,7 +4,7 @@
 /**
 *void prototypes()
 *int prototypes()
-*Char prototypes()
+*char prototypes()
 */
 void reverse_array(int* a, int n);
 void print_number(int n);
