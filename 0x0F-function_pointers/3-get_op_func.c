@@ -1,12 +1,12 @@
-#inlcude <stdio.h>
+#include <stdio.h>
 #include "3-calc.h"
 /**
- * get_opfunc - function pointer that selects the correct function to perform
- * the operation asked by the user
- * @s: the operator given by the user
+ * get_opfunc - get ops function of type char array that accepts two inputs of int data type
  *
- * Return: pointer to the function that corresponds to the 
- * operator gien as a parameter
+ * @s: a character pointer pointing to a symbol from the program argument
+ *
+ * Return: one of the operator functions to perform calculations
+ *
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -14,20 +14,16 @@ int (*get_op_func(char *s))(int, int)
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
+		{"%", op_div},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	i = 0;
-
-	while (ops[i].op)
+	while (i < 5)
 	{
-		if (strcmp(ops[i].op, s) == 0)
+		if (*s == *ops[i].op)
 			return (ops[i].f);
 		i++;
 	}
-
 	return (NULL);
 }
