@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	{
 	printf(", ");
 	break;
-	}j++;
+	} j++;
 	}
 	switch (format[i])
 	{
@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 		printf("%c", va_arg(valist, int)), c = 1;
 		break;
 	case 'i':
-		printf("%f", va_arg(valist, int)), c = 1;
+		printf("%d", va_arg(valist, int)), c = 1;
 		break;
 	case 'f':
 		printf("%f", va_arg(valist, double)), c = 1;
