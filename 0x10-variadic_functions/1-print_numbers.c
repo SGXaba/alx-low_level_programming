@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+
 /**
  * print_numbers - print num
  * @seperator: pointer param
