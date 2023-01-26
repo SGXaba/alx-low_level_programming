@@ -10,14 +10,18 @@
  * Return: A pointer to the desitnation buffer @dest.
  */
 
-void *_memcpy(void *dest, cont void *src, size_t n)
-{
-	unsigned int index;
-	unsigned char *destination = dest;
-	const unsigned char *source = src;
+char *_memcpy(char *dest, char *src, unsigned int n)
 
-	for (index = 0; index < n; index++)
-		destination[index] = source[index];
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < n)  /*Delacring WHILE*/
+	{
+		*(dest + i) = *(src + i); /*add 1 position dest and src*/
+		i++;
+	} /*END WHILE*/
+
 
 	return (dest);
 }
