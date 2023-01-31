@@ -7,14 +7,16 @@
  */
 int sum_listint(listint_t *head)
 {
-	int s = 0;
-	const listint_t *tmp;
+	int sum = 0;
 
-	tmp = head;
-	while (tmp)
+	while (head != NULL)
 	{
-		s += tmp->n;
-		tmp = tmp->next;
+		/* add n to sum*/
+		sum += head->n;
+		/*go to the next node*/
+		head = head->next;
 	}
-	return (s);
+
+	/*if list will be empty it will return sum = 0*/
+	return (sum);
 }

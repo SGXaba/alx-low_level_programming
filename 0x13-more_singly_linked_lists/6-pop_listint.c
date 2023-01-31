@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -9,19 +8,23 @@
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *tmp;
-	int n;
+	int first_node;
+	listint_t *temp, *next;
 
 	if (*head == NULL)
-	{
 		return (0);
-	}
-	else
-	{
-		n = (*head)->n;
-		tmp = *head;
-		*head = (*head)->next;
-		free(tmp);
-	}
-	return (n);
+
+	/*set head addr to temp*/
+	temp = *head;
+	/*get addr of next node*/
+	next = temp->next;
+	/*get element of first node*/
+	first_node = temp->n;
+
+	/*free first node*/
+	free(temp);
+
+	*head = next;
+
+	return (first_node);
 }
