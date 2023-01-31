@@ -1,0 +1,1 @@
+readme file of 0x12. C - Singly linked
