@@ -8,16 +8,10 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int num = 1;
-
-	if (index > (sizeof(unsigned long int) * 8))
-
+	if (index >= (sizeof(unsigned long int) * 8))
 		return (-1);
 
-	num = ~(num << index);/*bitwise Not operator is an unary operator*/
-	/*which is why we use the () to nest our left shift operator*/
+	*n &= ~(1 << index);
 
-	*n = *n & num
-
-		return (1);
+	return (1);
 }
