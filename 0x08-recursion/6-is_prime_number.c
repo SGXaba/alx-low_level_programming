@@ -1,32 +1,34 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _has_divisor - Test if a number has a divisor.
- * @n: The number.
- * @to: The limit of testing numbers.
- * Return: 1 if n has a divisor besides of 1 and n.
- * 	0 otherwise.
+ * is_prime - detects if an input number is a prime number.
+ * @n: input number.
+ * @c: iterator.
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
  */
-int _has_divisor(int n, int to)
+int is_prime(unsigned int n, unsigned int c)
 {
-	if (n == 2 || n == 3)
-		return (0);
-	if (n <= 1 || n % 2 == 0 || n % 3 == 0)
-		return (0);
-	if (n == 1)
-		return (0);
-	if (n  == (n % to == 0 || n % (to + 2) == 0))
-		return (0);
-	return (_has_divisor(n, to + 6));
+	if (n % c == 0)
+	{
+		if (n == c)
+			return (1);
+		else
+			return (0);
+	}
+	return (0 + is_prime(n, c + 1));
 }
-
 /**
- * is_prime_number - Tests if a number is a prime number.
- * @n: The number to test.
- * Return: 1 if n is prime. 0 otherwise.
+ * is_prime_number - detects if an input number is a prime number.
+ * @n: input number.
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
  */
 int is_prime_number(int n)
 {
-	return (_has_divisor(n, 5));
+	if (n == 0)
+		return (0);
+	if (n < 0)
+		return (0);
+	if (n == 1)
+		return (0);
+	return (is_prime(n, 2));
 }
