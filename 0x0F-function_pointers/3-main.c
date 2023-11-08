@@ -1,40 +1,38 @@
-#include "3-calc.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
 /**
- * main - program that perfoms simple operations
- * argc: argument counter number of arguments
- * @argv: argument vector array of arguments
+ * main - check the code for ALX students.
+ * @argc: argument count.
+ * @argv: argument vector.
  *
- * Return: Always 0 (succcess)
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
-	char *operator;
+	int a, b;
+	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argc[3]);
-	operator = arg[2];
-	
-	if (get_op_func(operator) == NULL || operator[1] != '\0')
+
+	if (argv[2][1])
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	
-	if ((*operator == 47 || *operator == 37) && num2 == 0)
+
+	operation = get_op_func(argv[2]);
+
+	if (operation == NULL)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
-	printf("%d\n", get_op_func(operator)(num1, num2));
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", operation(a, b));
 	return (0);
 }
