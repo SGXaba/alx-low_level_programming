@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * count_word - helper function to count the number of words in a strin
+ * count_word - helper function to count the number of words in a string
  * @s: string to evaluate
  *
  * Return: number of words
@@ -53,7 +53,6 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
-
 			if (c)
 			{
 				end = i;
