@@ -1,28 +1,24 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a listint_t list.
- * @head: The head of the list
+ * free_listint2 - frees a linked list
+ * @head: head of a list.
+ *
+ * Return: no return.
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *current, *temp;
-	
+	listint_t *temp;
+	listint_t *curr;
+
 	if (head != NULL)
 	{
-		/*set head addr to current*/
-		current = *head;
-		
-		/*iterate through the whole list*/
-		/*while setting the current node to temp*/
-		while ((temp = current) != NULL)
+		curr = *head;
+		while ((temp = curr) != NULL)
 		{
-			/*set next node to curretnt*/
-			current = current->next;
-			/*free temp, that is the current node*/
+			curr = curr->next;
 			free(temp);
 		}
-		
 		*head = NULL;
 	}
 }

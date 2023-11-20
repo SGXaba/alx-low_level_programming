@@ -1,16 +1,16 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a linked list, safely
- * @head: list of type listint_t to print
+ * free_listp - frees a linked list
+ * @head: head of a list.
  *
- * Return: number of nodes in the list
+ * Return: no return.
  */
 void free_listp(listp_t **head)
 {
 	listp_t *temp;
 	listp_t *curr;
-	
+
 	if (head != NULL)
 	{
 		curr = *head;
@@ -19,7 +19,7 @@ void free_listp(listp_t **head)
 			curr = curr->next;
 			free(temp);
 		}
-	*head = NULL;
+		*head = NULL;
 	}
 }
 
